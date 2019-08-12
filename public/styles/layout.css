@@ -33,6 +33,11 @@ body {
   height: 500px;
 }
 
+.tweet-label {
+  text-align: left;
+  display: block;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
