@@ -5,12 +5,15 @@ header {
   grid-column: 1;
 }
 
-.header-image {
-  padding-top: 50px;
-  margin: 0px;
+figure{
+  margin: 0;
 }
 
-.header-name h2{
-  padding: 0;
+.header-image {
+  padding: 1em;
   margin: 0;
+}
+
+.header-name {
+  text-align: center;
 }

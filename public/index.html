@@ -1,74 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!-- Google font for Source Sans Pro and Bungee-->
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300i,400,700i&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
-    <!-- nav CSS -->
-    <link rel = "stylesheet" href="/styles/nav.css" type="text/css" />
-    
-    <!-- double downward arrow icon-->
-    <script src="https://kit.fontawesome.com/385c38c683.js"></script>
-    <!-- header CSS -->
-    <link rel = "stylesheet" href="/styles/header.css" type="text/css" />
+  <!-- Google font for Source Sans Pro and Bungee-->
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300i,400,700i&display=swap"
+    rel="stylesheet">
 
-    <!-- new-tweet CSS -->
-    <link rel = "stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <!-- nav CSS -->
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- double downward arrow icon-->
+  <script src="https://kit.fontawesome.com/385c38c683.js"></script>
+  
+  <!-- header CSS -->
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+  <!-- new-tweet CSS -->
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
-  </head>
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-  <body>
+  <!-- External JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-    <!-- Top nav bar (fixed) -->
-    <nav id = "navbar">
-      <span>
-        <a class ="nav-item-left"> TWEETER</a>
-      </span>
-      <span>
-        <a class ="nav-item-right"> Write a new tweet </a>
-        <i class="fas fa-angle-double-down arrow-key"></i>
-      </span>
-    </nav>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/app.js"></script>
+</head>
 
-    <!-- Header -->
-    <header>
-        <div class = "header-image">
-            <img src="/images/profile-hex.png"> 
-        </div>
-        <div class = "header-name">
-            <h2><strong>Andrew</strong> Kim</h2>
-        </div>
-    </header>
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav id="navbar">
+    <span class="nav-item-stack">
+      <a href="#" class="nav-item-left">TWEETER</a>
+    </span>
+    <span class="nav-item-stack">
+      <a href="#" class="nav-item-right">Write a new tweet</a>
+      <i class="fas fa-angle-double-down arrow-key"></i>
+    </span>
+  </nav>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form action = "/tweets" method = "POST" class = "tweet-form">
-          <textarea class = "tweet-text-area" name="text" placeholder="What are you humming about?"></textarea>
-          <input class = "tweet-submit-button" type="submit" value="Tweet">
-          <span class="counter">140</span>
-        </form>
-      </section>
+  <!-- Header -->
+  <header>
+    <figure>
+      <img src="/images/profile-hex.png" alt="Andrew Kim" class="header-image">
+      <figcaption class="header-name">Andrew Kim</figcaption>
+    </figure>
+  </header>
 
-    </main>
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form action="/tweets" method="POST" class="tweet-form">
+        <label for="tweet-text"></label>
+        <textarea class="tweet-text-area" id="tweet-text" name="text"></textarea>
+        <button class="tweet-submit-button" type="submit">Tweet</button>
+        <span class="counter">140</span>
+      </form>
+    </section>
+  </main>
+</body>
 
-    
-
-  </body>
 </html>
