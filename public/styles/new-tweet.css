@@ -1,0 +1,38 @@
+.new-tweet {
+  grid-column: 2;
+  text-align: center;
+  width: 100%;
+}
+
+.tweet-form {
+  width: 90%;
+  margin: auto;
+  text-align: justify;
+}
+
+.tweet-text-area {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: #F5F5DC;
+  resize: none;
+  font-family: 'Source Sans Pro';
+  font-weight: bold;
+  height: 40px;
+}
+
+.tweet-text-area::placeholder {
+  font-weight: bolder;
+}
+
+.tweet-submit-button {
+  font-family: "Bungee";
+  background-color: #4056A1;
+  float: left;
+  color: #ffffff;
+}
+
+.counter {
+  float: right;
+  font-weight: 700;
+}

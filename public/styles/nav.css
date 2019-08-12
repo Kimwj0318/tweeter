@@ -1,0 +1,41 @@
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  background-color: #4056A1;
+}
+
+.nav-item-left {
+  font-family: "Bungee";
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+  color: #FFFFFF;
+  padding: 1em;
+  float: left;
+  font-size: 40px;
+}
+
+.nav-item-right {
+  display: table-cell;
+  height: 50%;
+  vertical-align: middle;
+  color: #FFFFFF;
+  padding: 1.5em;
+  padding-bottom: 0;
+  float: right;
+  font-size: 25px;
+}
+
+.arrow-key {
+  height: 50%;
+  width: 260px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 1.5em;
+  padding-top: 10px;
+  font-size: 25px;
+  float: right;
+  clear: right;
+}

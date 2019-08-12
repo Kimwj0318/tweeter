@@ -15,9 +15,22 @@ html {
  */
 
 body {
+  padding-top: 120px;
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #F5F5DC;
   font-size: 24px;
+  font-family: 'Source Sans Pro';
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.container {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: 1fr;
+  overflow: scroll;
+  height: 500px;
 }
 
 /*
