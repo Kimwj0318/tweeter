@@ -5,6 +5,10 @@ $(document).ready(function() {
   $("#tweet-text").keydown(function() {
     let currentLength = this.value.length;
     charRemaining.innerHTML = maxLength - currentLength
+
+    if(currentLength === maxLength) {
+      charRemaining.style.color = "red";
+    }
   })
 
 });
