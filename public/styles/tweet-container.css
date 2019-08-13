@@ -6,7 +6,7 @@
 .tweeted-article{
   height: 200px;
   display: grid;
-  grid-template-rows: 2em 2em 1em;
+  grid-template-rows: 2em 3em 1em;
   grid-row-gap: 10px;
   border: 2px solid black;
   padding: 1em;
@@ -20,23 +20,24 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.image-name{
+.header-image-name{
   width:100%;
 }
 
 .tweet-header-image {
   height: 100%;
-  float: left;
+  vertical-align: middle;
 }
 
-.tweet-header-firstname {
+.tweet-header-name {
   height: 100%;
   margin: 0;
 }
 
-.tweet-header-lastname {
+.tweet-header-handle {
   height: 100%;
   margin: 0;
   visibility:hidden;
