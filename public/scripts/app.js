@@ -31,10 +31,10 @@ const tweetData = [
 ]
 
 const timeDifference = function(time) {
+  // The function was copied from stackOverflow and readjusted to meet the requirements of this project
   const endDate = Date.now();
   const startDate = time;
 
-  // get total seconds between the times
   let delta = (endDate - startDate) / 1000;
 
   let years = Math.floor(delta/ (60*60*24*365));
@@ -43,19 +43,15 @@ const timeDifference = function(time) {
   let months = Math.floor(delta/ (60*60*24*30));
   delta -= months * (60*60*24*30);
 
-  // calculate (and subtract) whole days
   let days = Math.floor(delta / (60*60*24));
   delta -= days * 86400;
 
-  // calculate (and subtract) whole hours
   let hours = Math.floor(delta / (60*60)) % 24;
   delta -= hours * 3600;
 
-  // calculate (and subtract) whole minutes
   let minutes = Math.floor(delta / 60) % 60;
   delta -= minutes * 60;
 
-  // what's left is seconds
   let seconds = delta % 60;
   
   if (years) {
@@ -83,7 +79,6 @@ const timeDifference = function(time) {
 
 const createTweetElement = function(obj) {
   //input: an object with 3 keys: user, content, and date
-  //output: 
   const $tweet = $(`
     <article class="tweeted-article">
       <header class="tweeted-header">
@@ -114,7 +109,6 @@ const createTweetElement = function(obj) {
 
 const renderTweets = function(tweetArray){
   //input: an array with objects as its elements
-  //output: 
   const tweetContainer = $(".tweet-container");
   for (let element of tweetData){
     let tweet = createTweetElement(element);
