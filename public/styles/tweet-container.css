@@ -1,0 +1,24 @@
+.tweet-container {
+  grid-column: 2;
+  border: 2px solid black;
+  padding: 1em;
+}
+
+.tweeted-article{
+  display: grid;
+  grid-template-rows: 1em 3em 1em;
+}
+
+.tweeted-header{
+  grid-row: 1;
+}
+
+.tweeted-text {
+  grid-row: 2;
+  margin: 0;
+  border-bottom: 2px solid black;
+}
+
+.tweeted-footer{
+  grid-row: 3;
+}

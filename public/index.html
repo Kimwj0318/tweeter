@@ -24,6 +24,9 @@
   <!-- new-tweet CSS -->
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+  <!-- tweet-container CSS-->
+  <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
@@ -65,8 +68,24 @@
         <label for="tweet-text" class="tweet-label">What are you humming about?</label>
         <textarea class="tweet-text-area" id="tweet-text" name="text" maxlength="140"></textarea>
         <button class="tweet-submit-button" type="submit">Tweet</button>
-        <span id="text-counter" class="counter">140</span>
+        <span class="counter">140</span>
       </form>
+    </section>
+
+    <section class="tweet-container">
+      <article class="tweeted-article">
+        <header class="tweeted-header">
+          header
+        </header>
+        <p class="tweeted-text">
+          What is going on people
+        </p>
+        <footer class="tweeted-footer">
+          <span>&#9825;</span>
+          <span>&#9873;</span>
+        </footer>
+      </article>
+
     </section>
   </main>
 </body>

@@ -1,11 +1,11 @@
 header {
-  height: 400px;
   display: grid;
   justify-items: center;
   grid-column: 1;
 }
 
 figure{
+  height: 400px;
   margin: 0;
 }
 

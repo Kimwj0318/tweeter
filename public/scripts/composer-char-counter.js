@@ -1,10 +1,10 @@
 $(document).ready(function() {
   $("#tweet-text").keyup(function() {
     let parent = this.closest(".tweet-form");
-    let charRemaining = $(parent).children(".counter")["0"];
+    let charRemaining = $(this).siblings(".counter")[0];
     const maxLength = 140;
-    charRemaining.innerHTML = maxLength;
     let currentLength = this.value.length;
+    
     charRemaining.innerHTML = maxLength - currentLength
     if(currentLength === maxLength) {
       charRemaining.style.color = "red";
