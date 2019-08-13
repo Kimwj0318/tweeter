@@ -18,7 +18,7 @@
   resize: none;
   font-family: 'Source Sans Pro';
   font-weight: bold;
-  height: 40px;
+  height: 80px;
 }
 
 .tweet-text-area::placeholder {
