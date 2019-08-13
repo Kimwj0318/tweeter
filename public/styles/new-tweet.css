@@ -1,5 +1,6 @@
 .new-tweet {
   grid-column: 2;
+  grid-row: 1;
   text-align: center;
   width: 100%;
 }
@@ -8,6 +9,9 @@
   width: 90%;
   margin: auto;
   text-align: justify;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .tweet-text-area {
@@ -28,11 +32,9 @@
 .tweet-submit-button {
   font-family: "Bungee";
   background-color: #4056A1;
-  float: left;
   color: #ffffff;
 }
 
 .counter {
-  float: right;
   font-weight: 700;
 }

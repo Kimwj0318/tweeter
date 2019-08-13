@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
   <!-- Google font for Source Sans Pro and Bungee-->
-  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300i,400,700i&display=swap"
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,700i&display=swap"
     rel="stylesheet">
 
   <!-- nav CSS -->
@@ -38,6 +38,10 @@
 
   <!-- char-counter.js-->
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+  <!-- tweet-hover.js-->
+  <script type="text/javascript" src="/scripts/tweet-hover.js"></script>
+
 </head>
 
 <body>
@@ -53,8 +57,8 @@
   </nav>
 
   <!-- Header -->
-  <header>
-    <figure>
+  <header class="main-header">
+    <figure class="main-figure">
       <img src="/images/profile-hex.png" alt="Andrew Kim" class="header-image">
       <figcaption class="header-name">Andrew Kim</figcaption>
     </figure>
@@ -75,14 +79,23 @@
     <section class="tweet-container">
       <article class="tweeted-article">
         <header class="tweeted-header">
-          header
+          <span class="image-name">
+            <img src="/images/profile-hex.png" alt="Andrew Kim" class="tweet-header-image">
+            <p class="tweet-header-firstname">Andrew</p>
+          </span>
+          <span>
+            <p class="tweet-header-lastname">@Kim</p>
+          </span>
         </header>
         <p class="tweeted-text">
           What is going on people
         </p>
         <footer class="tweeted-footer">
-          <span>&#9825;</span>
-          <span>&#9873;</span>
+          <div>Date</div>
+          <div>
+            <span>&#9825;</span>
+            <span>&#9873;</span>
+          </div>
         </footer>
       </article>
 

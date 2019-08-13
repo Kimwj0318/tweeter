@@ -1,10 +1,10 @@
-header {
+.main-header {
   display: grid;
   justify-items: center;
   grid-column: 1;
 }
 
-figure{
+.main-figure{
   height: 400px;
   margin: 0;
 }

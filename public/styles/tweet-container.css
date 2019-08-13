@@ -1,16 +1,45 @@
 .tweet-container {
   grid-column: 2;
-  border: 2px solid black;
-  padding: 1em;
+  grid-row: 2;
 }
 
 .tweeted-article{
+  height: 200px;
   display: grid;
-  grid-template-rows: 1em 3em 1em;
+  grid-template-rows: 2em 2em 1em;
+  grid-row-gap: 10px;
+  border: 2px solid black;
+  padding: 1em;
+  margin: 1em;
+  font-family: "Source Sans Pro";
+  font-weight: 300;
 }
 
 .tweeted-header{
   grid-row: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-name{
+  width:100%;
+}
+
+.tweet-header-image {
+  height: 100%;
+  float: left;
+}
+
+.tweet-header-firstname {
+  height: 100%;
+  margin: 0;
+}
+
+.tweet-header-lastname {
+  height: 100%;
+  margin: 0;
+  visibility:hidden;
 }
 
 .tweeted-text {
@@ -20,5 +49,7 @@
 }
 
 .tweeted-footer{
+  display: flex;
+  justify-content: space-between;
   grid-row: 3;
 }
