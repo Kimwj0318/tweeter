@@ -54,3 +54,18 @@
   justify-content: space-between;
   grid-row: 3;
 }
+
+.tweeted-article:hover {
+  font-weight: 400;
+  font-style: normal;
+  box-shadow: "5px 5px #888888";
+}
+
+.tweeted-article:hover .tweet-header-handle{
+  visibility: visible;
+}
+
+.tweeted-article {
+  font-weight: 300;
+  font-style: normal;
+}

@@ -110,37 +110,41 @@ const createTweetElement = function(obj) {
 const renderTweets = function(tweetArray){
   //input: an array with objects as its elements
   const tweetContainer = $(".tweet-container");
-  for (let element of tweetData){
+  for (let element of tweetArray){
     let tweet = createTweetElement(element);
     tweetContainer.append(tweet);
   }
 }
 
-$(document).ready(function() {
-  renderTweets(tweetData);
+const loadTweets = function() {
+  const url = "/tweets";
+  const type = "GET";
+  $.ajax({
+    url: url,
+    type: type,
+    complete: function(data){
+      console.log(data);
+      renderTweets(data.responseJSON);
+    }
+  })
+}
 
+$(document).ready(function() {
+  loadTweets();
+  // renderTweets(tweetData);
   $(".tweet-form").submit(function(event) {
     event.preventDefault();
-    const url = "/tweets/"
+    const url = "/tweets/";
     const data = $(this).serialize();
-    const type = "POST"
+    const type = "POST";
     $.ajax({
       url: url,
       data: data,
       dataType: "json",
       type: type,
-      // success: function(data){
-      //   console.log(data);
-      // },
       complete: function(data){
-        console.log(data);
         let dataString = JSON.stringify(data);
-        console.log(dataString);
       }
     })
-    // .success(function(tweet){
-    //   console.log("is it going in here");
-    //   console.log(tweet);
-    // })
   });
 });
