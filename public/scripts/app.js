@@ -118,4 +118,29 @@ const renderTweets = function(tweetArray){
 
 $(document).ready(function() {
   renderTweets(tweetData);
+
+  $(".tweet-form").submit(function(event) {
+    event.preventDefault();
+    const url = "/tweets/"
+    const data = $(this).serialize();
+    const type = "POST"
+    $.ajax({
+      url: url,
+      data: data,
+      dataType: "json",
+      type: type,
+      // success: function(data){
+      //   console.log(data);
+      // },
+      complete: function(data){
+        console.log(data);
+        let dataString = JSON.stringify(data);
+        console.log(dataString);
+      }
+    })
+    // .success(function(tweet){
+    //   console.log("is it going in here");
+    //   console.log(tweet);
+    // })
+  });
 });
