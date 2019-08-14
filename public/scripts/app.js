@@ -4,32 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const tweetData = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" 
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
 const timeDifference = function(time) {
   // The function was copied from stackOverflow and readjusted to meet the requirements of this project
   const endDate = Date.now();
@@ -52,7 +26,7 @@ const timeDifference = function(time) {
   let minutes = Math.floor(delta / 60) % 60;
   delta -= minutes * 60;
 
-  let seconds = delta % 60;
+  let seconds = Math.floor(delta % 60);
   
   if (years) {
     return years + " years ago"
@@ -81,35 +55,49 @@ const createTweetElement = function(obj) {
   //input: an object with 3 keys: user, content, and date
   const $tweet = $(`
     <article class="tweeted-article">
-      <header class="tweeted-header">
+    </article>
+  `);
+ 
+  const $tweetHeader = $(`
+    <header class="tweeted-header">
         <span class="header-image-name">
-          <img src="${obj.user.avatars}" alt="Andrew Kim" class="tweet-header-image">
+          <img src=${obj.user.avatars} alt="Andrew Kim" class="tweet-header-image">
           ${obj.user.name}
         </span>
         <span>
           <p class="tweet-header-handle">${obj.user.handle}</p>
         </span>
       </header>
-      <p class="tweeted-text">
-        ${obj.content.text}
-      </p>
-      <footer class="tweeted-footer">
-        <span class="tweet-date">${timeDifference(obj.created_at)}</span>
-        <span>
-          <span>&#9825;</span>
-          <i class="fas fa-retweet"></i>
-          <span>&#9873;</span>
-        </span>
-      </footer>
-    </article>
   `);
- 
+
+  const $tweetContent = $(`
+   
+    <p class="tweeted-text">
+    </p>
+  `).text(obj.content.text);
+
+  const $tweetFooter = $(`
+    <footer class="tweeted-footer">
+      <span class="tweet-date">${timeDifference(obj.created_at)}</span>
+      <span>
+        <span>&#9825;</span>
+        <i class="fas fa-retweet"></i>
+        <span>&#9873;</span>
+      </span>
+    </footer>
+  `);
+
+  $tweet.append($tweetHeader);
+  $tweet.append($tweetContent);
+  $tweet.append($tweetFooter);
+
   return $tweet;
 }
 
 const renderTweets = function(tweetArray){
   //input: an array with objects as its elements
   const tweetContainer = $(".tweet-container");
+  tweetContainer.empty();
   for (let element of tweetArray){
     let tweet = createTweetElement(element);
     tweetContainer.append(tweet);
@@ -123,7 +111,6 @@ const loadTweets = function() {
     url: url,
     type: type,
     complete: function(data){
-      console.log(data);
       renderTweets(data.responseJSON);
     }
   })
@@ -131,20 +118,37 @@ const loadTweets = function() {
 
 $(document).ready(function() {
   loadTweets();
-  // renderTweets(tweetData);
+  const $tweetContainer = $(".container");
+  const $tweetComposer = $(".new-tweet");
+  $tweetComposer.hide();
+  $(".error-message").hide();
   $(".tweet-form").submit(function(event) {
     event.preventDefault();
+    
     const url = "/tweets/";
     const data = $(this).serialize();
     const type = "POST";
-    $.ajax({
-      url: url,
-      data: data,
-      dataType: "json",
-      type: type,
-      complete: function(data){
-        let dataString = JSON.stringify(data);
-      }
-    })
+    
+    if(data.length-5){
+      $.ajax({
+        url: url,
+        data: data,
+        type: type,
+      })
+      .then(loadTweets);
+      $(".tweet-text-area").val("");
+    } else {
+      $(".error-message").show();
+      setTimeout(function(){
+        $(".error-message").hide();
+      }, 1000);
+    }
   });
+
+  const $postNewTweetButton = $(".nav-item-right");
+  $postNewTweetButton.click(function(event) {
+    event.preventDefault();
+    $tweetComposer.slideToggle("slow", "linear");
+  })
+
 });

@@ -30,7 +30,6 @@ body {
   grid-column: 2;
   display: grid;
   grid-template-columns: 5% 90% 5%;
-  grid-template-rows: 1fr 2fr;
   overflow: auto;
   height: 100%;
 }
@@ -40,6 +39,13 @@ body {
   display: block;
 }
 
+.error-message {
+  grid-column: 2;
+  border: 2px solid red;
+  color: red;
+  padding: 1em;
+  margin: 1em;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

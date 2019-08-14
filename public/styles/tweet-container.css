@@ -1,18 +1,19 @@
 .tweet-container {
   grid-column: 2;
-  grid-row: 2;
 }
 
 .tweeted-article{
-  height: 200px;
+  height: 250px;
   display: grid;
-  grid-template-rows: 2em 3em 1em;
+  grid-template-rows: 3em 3em 1em;
   grid-row-gap: 10px;
   border: 2px solid black;
   padding: 1em;
   margin: 1em;
   font-family: "Source Sans Pro";
   font-weight: 300;
+  width: 100%;
+  hyphens: auto;
 }
 
 .tweeted-header{
@@ -20,7 +21,6 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .header-image-name{
@@ -39,11 +39,13 @@
 
 .tweet-header-handle {
   height: 100%;
+  width: 150px;
   margin: 0;
   visibility:hidden;
 }
 
 .tweeted-text {
+  width: 100%;
   grid-row: 2;
   margin: 0;
   border-bottom: 2px solid black;
