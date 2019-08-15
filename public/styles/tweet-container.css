@@ -9,7 +9,7 @@
   .tweeted-article{
     width:100%;
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 90px 1fr 40px;
     grid-row-gap: 10px;
     border: 2px solid black;
     padding: 1em;
@@ -93,7 +93,7 @@
   
   .tweeted-article{
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 90px 1fr 40px;
     grid-row-gap: 10px;
     border: 2px solid black;
     padding: 1em;
@@ -176,7 +176,7 @@
   .tweeted-article{
     width:100%;
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 90px 1fr 40px;
     grid-row-gap: 10px;
     border: 2px solid black;
     padding: 1em;
