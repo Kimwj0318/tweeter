@@ -2,9 +2,12 @@
 @media only screen and (max-width: 430px) {
   .tweet-container {
     grid-column: 2;
+    display: flex;
+    flex-wrap: wrap-reverse;
   }
   
   .tweeted-article{
+    width:100%;
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
     grid-row-gap: 10px;
@@ -22,7 +25,6 @@
   
   .header-image-name{
     display: flex;
-    align-items: baseline;
     justify-content: space-between;
   }
   
@@ -78,6 +80,8 @@
 @media only screen and (min-width: 430px) and (max-width: 1024px) {
   .tweet-container {
     grid-column: 2;
+    display: flex;
+    flex-wrap: wrap-reverse;
   }
   
   .tweeted-article{
@@ -90,6 +94,7 @@
     font-family: "Source Sans Pro";
     font-weight: 300;
     hyphens: auto;
+    width:100%;
   }
   
   .tweeted-header{
@@ -149,11 +154,14 @@
  @media only screen and (min-width: 1024px) {
   .tweet-container {
     grid-column: 2;
+    display: flex;
+    flex-wrap: wrap-reverse;
   }
   
   .tweeted-article{
+    width:100%;
     display: grid;
-    grid-template-rows: 3em 3em 1em;
+    grid-template-rows: 1fr 2fr 1fr;
     grid-row-gap: 10px;
     border: 2px solid black;
     padding: 1em;
