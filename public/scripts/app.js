@@ -118,7 +118,7 @@ const loadTweets = function() {
 
 $(document).ready(function() {
   loadTweets();
-  
+
   const $tweetContainer = $(".container");
   const $tweetComposer = $(".new-tweet");
   $tweetComposer.hide();
@@ -139,8 +139,8 @@ $(document).ready(function() {
       .then(loadTweets)
       .then(function(){
         $(".counter")[0].innerHTML = 140;
+        $(".tweet-text-area").val("");
       });
-      $(".tweet-text-area").val("");
     } else {
       $(".error-message").show();
       setTimeout(function(){
@@ -149,7 +149,15 @@ $(document).ready(function() {
     }
   });
 
-  const $postNewTweetButton = $(".nav-item-right");
+  $("body").scroll(function(){
+
+  });
+
+  $(".container").scroll(function(){
+    
+  });
+
+  const $postNewTweetButton = $(".new-tweet-button");
   const $textArea = $(".tweet-text-area");
   $postNewTweetButton.click(function(event) {
     event.preventDefault();

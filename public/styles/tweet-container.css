@@ -59,6 +59,13 @@
     align-self: center;
   }
   
+  .tweet-icon{
+    visibility: hidden;
+  }
+  
+  .tweeted-article:hover .tweet-icon{
+    visibility: visible;
+  }
   .tweeted-article:hover {
     font-weight: 400;
     font-style: normal;
@@ -202,6 +209,14 @@
     margin: 0;
     visibility:hidden;
   }
+
+  .tweet-icon{
+    visibility: hidden;
+  }
+  
+  .tweeted-article:hover .tweet-icon{
+    visibility: visible;
+  }
   
   .tweeted-text {
     grid-row: 2;
@@ -226,7 +241,7 @@
   .tweeted-article:hover .tweet-header-handle{
     visibility: visible;
   }
-  
+
   .tweeted-article {
     font-weight: 300;
     font-style: normal;
