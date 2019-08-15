@@ -135,7 +135,10 @@ $(document).ready(function() {
         data: data,
         type: type,
       })
-      .then(loadTweets);
+      .then(loadTweets)
+      .then(function(){
+        $(".counter")[0].innerHTML = 140;
+      });
       $(".tweet-text-area").val("");
     } else {
       $(".error-message").show();
