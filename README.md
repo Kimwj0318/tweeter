@@ -3,7 +3,10 @@
 Tweeter is a simple, single-page Twitter clone.
 
 ## Final Product
-
+!["Screenshot of desktop default view"](https://github.com/Kimwj0318/tweeter/blob/master/docs/Desktop-default-view.png)
+!["Screenshot of desktop tweetbox view"](https://github.com/Kimwj0318/tweeter/blob/master/docs/Desktop-tweetBox-view.png)
+!["Screenshot of tablet default view"](https://github.com/Kimwj0318/tweeter/blob/master/docs/iPad-default-view.png)
+!["Screenshot of smartphone default view"](https://github.com/Kimwj0318/tweeter/blob/master/docs/Smartphone-default-view.png)
 ## Dependencies
 
 - Express
