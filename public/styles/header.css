@@ -1,22 +1,76 @@
-.main-header {
-  display: grid;
-  justify-items: center;
-  grid-column: 1;
-  background-color: #e1d5bf;
+/* Write smartphone only styles here */
+@media only screen and (max-width: 420px) {
+  .main-header {
+    display: grid;
+    justify-items: center;
+    grid-column: 1;
+    background-color: #e1d5bf;
+  }
+  
+  .main-figure{
+    height: 300px;
+    margin: 0;
+  }
+  
+  .header-image {
+    height: 75%;
+    padding: 1em;
+    margin: 0;
+  }
+  
+  .header-name {
+    text-align: center;
+    font-size: 1em;
+  }
 }
 
-.main-figure{
-  height: 400px;
-  margin: 0;
+
+/* responsive design for tablet */
+@media only screen and (min-width: 768px) {
+  .main-header {
+    display: grid;
+    justify-items: center;
+    grid-column: 1;
+    background-color: #e1d5bf;
+  }
+  
+  .main-figure{
+    height: 400px;
+    margin: 0;
+  }
+  
+  .header-image {
+    padding: 1em;
+    margin: 0;
+  }
+  
+  .header-name {
+    text-align: center;
+    font-size: 1em;
+  }
 }
 
-.header-image {
-  padding: 1em;
-  margin: 0;
+ /* Responsive design for desktop */
+ @media only screen and (min-width: 1024px) {
+  .main-header {
+    display: grid;
+    justify-items: center;
+    grid-column: 1;
+    background-color: #e1d5bf;
+  }
+  
+  .main-figure{
+    height: 400px;
+    margin: 0;
+  }
+  
+  .header-image {
+    padding: 1em;
+    margin: 0;
+  }
+  
+  .header-name {
+    text-align: center;
+    font-size: 1em;
+  }
 }
-
-.header-name {
-  text-align: center;
-  font-size: 1em;
-}
-
