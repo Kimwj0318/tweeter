@@ -19,7 +19,7 @@ html {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 /* responsive design for smartphones */
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 430px) {
   body {
     padding-top: 120px;
     color: (84, 81, 73);
@@ -54,7 +54,7 @@ html {
 
 
 /* responsive design for tablet */
-@media only screen and (min-width: 420px) and (max-width: 1024px) {
+@media only screen and (min-width: 430px) and (max-width: 1024px) {
   body {
     padding-top: 120px;
     color: (84, 81, 73);

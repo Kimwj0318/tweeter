@@ -1,5 +1,5 @@
 /* Write smartphone only styles here */
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 430px) {
   .main-header {
     display: grid;
     justify-items: center;
@@ -27,7 +27,7 @@
 
 
 /* responsive design for tablet */
-@media only screen and (min-width: 420px) and (max-width: 1024px) {
+@media only screen and (min-width: 430px) and (max-width: 1024px) {
   .main-header {
     display: grid;
     justify-items: center;
