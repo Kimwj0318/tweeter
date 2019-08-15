@@ -79,7 +79,7 @@ const createTweetElement = function(obj) {
   const $tweetFooter = $(`
     <footer class="tweeted-footer">
       <span class="tweet-date">${timeDifference(obj.created_at)}</span>
-      <span>
+      <span class="tweet-icon">
         <span>&#9825;</span>
         <i class="fas fa-retweet"></i>
         <span>&#9873;</span>
@@ -118,6 +118,7 @@ const loadTweets = function() {
 
 $(document).ready(function() {
   loadTweets();
+  
   const $tweetContainer = $(".container");
   const $tweetComposer = $(".new-tweet");
   $tweetComposer.hide();
@@ -149,9 +150,11 @@ $(document).ready(function() {
   });
 
   const $postNewTweetButton = $(".nav-item-right");
+  const $textArea = $(".tweet-text-area");
   $postNewTweetButton.click(function(event) {
     event.preventDefault();
     $tweetComposer.slideToggle("slow", "linear");
+    $textArea.focus();
   })
 
 });

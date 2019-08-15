@@ -127,6 +127,10 @@
     align-self: end;
   }
   
+  .tweet-icon{
+    visibility: hidden;
+  }
+
   .tweeted-footer{
     display: flex;
     justify-content: space-between;
@@ -140,10 +144,14 @@
     box-shadow: "5px 5px #888888";
   }
   
-  .tweeted-article:hover .tweet-header-handle{
+  .tweeted-article:hover .tweet-icon{
     visibility: visible;
   }
   
+  .tweeted-article:hover .tweet-header-handle{
+    visibility: visible;
+  }
+
   .tweeted-article {
     font-weight: 300;
     font-style: normal;
