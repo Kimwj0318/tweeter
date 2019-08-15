@@ -117,12 +117,20 @@ const loadTweets = function() {
 }
 
 $(document).ready(function() {
-  loadTweets();
-
   const $tweetContainer = $(".container");
   const $tweetComposer = $(".new-tweet");
+  const $postNewTweetButton = $(".new-tweet-button");
+  const $textArea = $(".tweet-text-area");
   $tweetComposer.hide();
   $(".error-message").hide();
+  loadTweets();
+
+  $postNewTweetButton.click(function(event) {
+    event.preventDefault();
+    $tweetComposer.toggle("slow", "linear");
+    $textArea.focus();
+  })
+
   $(".tweet-form").submit(function(event) {
     event.preventDefault();
     
@@ -148,21 +156,5 @@ $(document).ready(function() {
       }, 1000);
     }
   });
-
-  $("body").scroll(function(){
-
-  });
-
-  $(".container").scroll(function(){
-    
-  });
-
-  const $postNewTweetButton = $(".new-tweet-button");
-  const $textArea = $(".tweet-text-area");
-  $postNewTweetButton.click(function(event) {
-    event.preventDefault();
-    $tweetComposer.slideToggle("slow", "linear");
-    $textArea.focus();
-  })
 
 });
