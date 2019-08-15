@@ -1,39 +1,135 @@
-.new-tweet {
-  grid-column: 2;
-  text-align: center;
-  width: 100%;
+@media only screen and (max-width: 420px) {
+  h2 {
+    margin: 10px;
+  }
+
+  .new-tweet {
+    grid-column: 2;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .tweet-form {
+    margin: 10px;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .tweet-label {
+    font-size: 20px;
+  }
+
+  .tweet-text-area {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: #ADD8E6;
+    resize: none;
+    font-family: 'Source Sans Pro';
+    font-weight: bold;
+    height: 80px;
+  }
+  
+  .tweet-text-area::placeholder {
+    font-weight: bolder;
+  }
+  
+  .tweet-submit-button {
+    font-family: "Bungee";
+    background-color: #4056A1;
+    color: #ffffff;
+  }
+  
+  .counter {
+    font-weight: 700;
+  }
 }
 
-.tweet-form {
-  width: 90%;
-  margin: auto;
-  text-align: justify;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+
+/* responsive design for tablet */
+@media only screen and (min-width: 420px) and (max-width: 1024px) {
+  .new-tweet {
+    grid-column: 2;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .tweet-form {
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .tweet-text-area {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: #ADD8E6;
+    resize: none;
+    font-family: 'Source Sans Pro';
+    font-weight: bold;
+    height: 80px;
+  }
+  
+  .tweet-text-area::placeholder {
+    font-weight: bolder;
+  }
+  
+  .tweet-submit-button {
+    font-family: "Bungee";
+    background-color: #4056A1;
+    color: #ffffff;
+  }
+  
+  .counter {
+    font-weight: 700;
+  }
 }
 
-.tweet-text-area {
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid black;
-  background-color: #ADD8E6;
-  resize: none;
-  font-family: 'Source Sans Pro';
-  font-weight: bold;
-  height: 80px;
-}
-
-.tweet-text-area::placeholder {
-  font-weight: bolder;
-}
-
-.tweet-submit-button {
-  font-family: "Bungee";
-  background-color: #4056A1;
-  color: #ffffff;
-}
-
-.counter {
-  font-weight: 700;
+ /* Responsive design for desktop */
+ @media only screen and (min-width: 1024px) {
+  .new-tweet {
+    grid-column: 2;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .tweet-form {
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .tweet-text-area {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: #ADD8E6;
+    resize: none;
+    font-family: 'Source Sans Pro';
+    font-weight: bold;
+    height: 80px;
+  }
+  
+  .tweet-text-area::placeholder {
+    font-weight: bolder;
+  }
+  
+  .tweet-submit-button {
+    font-family: "Bungee";
+    background-color: #4056A1;
+    color: #ffffff;
+  }
+  
+  .counter {
+    font-weight: 700;
+  }
 }

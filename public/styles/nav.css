@@ -38,7 +38,7 @@
 
 
 /* responsive design for tablet */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 420px) and (max-width: 1024px) {
   #navbar {
     position: fixed;
     top: 0;

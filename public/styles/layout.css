@@ -20,7 +20,6 @@ html {
  */
 /* responsive design for smartphones */
 @media only screen and (max-width: 420px) {
-  /* Write smartphone only styles here */
   body {
     padding-top: 120px;
     color: (84, 81, 73);
@@ -29,12 +28,12 @@ html {
     font-family: 'Source Sans Pro';
     display: grid;
     height: 100%;
+    overflow: auto;
   }
   
   .container {
     display: grid;
     grid-template-columns: 5% 90% 5%;
-    overflow: auto;
     height: 100%;
   }
   
@@ -55,7 +54,7 @@ html {
 
 
 /* responsive design for tablet */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 420px) and (max-width: 1024px) {
   body {
     padding-top: 120px;
     color: (84, 81, 73);
@@ -64,12 +63,12 @@ html {
     font-family: 'Source Sans Pro';
     display: grid;
     height: 100%;
+    overflow: auto;
   }
   
   .container {
     display: grid;
     grid-template-columns: 5% 90% 5%;
-    overflow: auto;
     height: 100%;
   }
   

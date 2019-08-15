@@ -1,73 +1,234 @@
-.tweet-container {
-  grid-column: 2;
+/* Write smartphone only styles here */
+@media only screen and (max-width: 420px) {
+  .tweet-container {
+    grid-column: 2;
+  }
+  
+  .tweeted-article{
+    height: 250px;
+    display: grid;
+    grid-template-rows: 3em 3em 1em;
+    grid-row-gap: 10px;
+    border: 2px solid black;
+    padding: 1em;
+    margin: 1em;
+    font-family: "Source Sans Pro";
+    font-weight: 300;
+    width: 100%;
+    hyphens: auto;
+  }
+  
+  .tweeted-header{
+    grid-row: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .header-image-name{
+    width:100%;
+  }
+  
+  .tweet-header-image {
+    height: 100%;
+    vertical-align: middle;
+  }
+  
+  .tweet-header-name {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .tweet-header-handle {
+    height: 100%;
+    width: 150px;
+    margin: 0;
+    visibility:hidden;
+  }
+  
+  .tweeted-text {
+    width: 100%;
+    grid-row: 2;
+    margin: 0;
+    border-bottom: 2px solid black;
+  }
+  
+  .tweeted-footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    grid-row: 3;
+  }
+  
+  .tweeted-article:hover {
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: "5px 5px #888888";
+  }
+  
+  .tweeted-article:hover .tweet-header-handle{
+    visibility: visible;
+  }
+  
+  .tweeted-article {
+    font-weight: 300;
+    font-style: normal;
+  }
 }
 
-.tweeted-article{
-  height: 250px;
-  display: grid;
-  grid-template-rows: 3em 3em 1em;
-  grid-row-gap: 10px;
-  border: 2px solid black;
-  padding: 1em;
-  margin: 1em;
-  font-family: "Source Sans Pro";
-  font-weight: 300;
-  width: 100%;
-  hyphens: auto;
+
+/* responsive design for tablet */
+@media only screen and (min-width: 420px) and (max-width: 1024px) {
+  .tweet-container {
+    grid-column: 2;
+  }
+  
+  .tweeted-article{
+    height: 250px;
+    display: grid;
+    grid-template-rows: 3em 3em 1em;
+    grid-row-gap: 10px;
+    border: 2px solid black;
+    padding: 1em;
+    margin: 1em;
+    font-family: "Source Sans Pro";
+    font-weight: 300;
+    width: 100%;
+    hyphens: auto;
+  }
+  
+  .tweeted-header{
+    grid-row: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .header-image-name{
+    width:100%;
+  }
+  
+  .tweet-header-image {
+    height: 100%;
+    vertical-align: middle;
+  }
+  
+  .tweet-header-name {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .tweet-header-handle {
+    height: 100%;
+    width: 150px;
+    margin: 0;
+    visibility:hidden;
+  }
+  
+  .tweeted-text {
+    width: 100%;
+    grid-row: 2;
+    margin: 0;
+    border-bottom: 2px solid black;
+  }
+  
+  .tweeted-footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    grid-row: 3;
+  }
+  
+  .tweeted-article:hover {
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: "5px 5px #888888";
+  }
+  
+  .tweeted-article:hover .tweet-header-handle{
+    visibility: visible;
+  }
+  
+  .tweeted-article {
+    font-weight: 300;
+    font-style: normal;
+  }
 }
 
-.tweeted-header{
-  grid-row: 1;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.header-image-name{
-  width:100%;
-}
-
-.tweet-header-image {
-  height: 100%;
-  vertical-align: middle;
-}
-
-.tweet-header-name {
-  height: 100%;
-  margin: 0;
-}
-
-.tweet-header-handle {
-  height: 100%;
-  width: 150px;
-  margin: 0;
-  visibility:hidden;
-}
-
-.tweeted-text {
-  width: 100%;
-  grid-row: 2;
-  margin: 0;
-  border-bottom: 2px solid black;
-}
-
-.tweeted-footer{
-  display: flex;
-  justify-content: space-between;
-  grid-row: 3;
-}
-
-.tweeted-article:hover {
-  font-weight: 400;
-  font-style: normal;
-  box-shadow: "5px 5px #888888";
-}
-
-.tweeted-article:hover .tweet-header-handle{
-  visibility: visible;
-}
-
-.tweeted-article {
-  font-weight: 300;
-  font-style: normal;
+ /* Responsive design for desktop */
+ @media only screen and (min-width: 1024px) {
+  .tweet-container {
+    grid-column: 2;
+  }
+  
+  .tweeted-article{
+    height: 250px;
+    display: grid;
+    grid-template-rows: 3em 3em 1em;
+    grid-row-gap: 10px;
+    border: 2px solid black;
+    padding: 1em;
+    margin: 1em;
+    font-family: "Source Sans Pro";
+    font-weight: 300;
+    width: 100%;
+    hyphens: auto;
+  }
+  
+  .tweeted-header{
+    grid-row: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .header-image-name{
+    width:100%;
+  }
+  
+  .tweet-header-image {
+    height: 100%;
+    vertical-align: middle;
+  }
+  
+  .tweet-header-name {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .tweet-header-handle {
+    height: 100%;
+    width: 150px;
+    margin: 0;
+    visibility:hidden;
+  }
+  
+  .tweeted-text {
+    width: 100%;
+    grid-row: 2;
+    margin: 0;
+    border-bottom: 2px solid black;
+  }
+  
+  .tweeted-footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    grid-row: 3;
+  }
+  
+  .tweeted-article:hover {
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: "5px 5px #888888";
+  }
+  
+  .tweeted-article:hover .tweet-header-handle{
+    visibility: visible;
+  }
+  
+  .tweeted-article {
+    font-weight: 300;
+    font-style: normal;
+  }
 }

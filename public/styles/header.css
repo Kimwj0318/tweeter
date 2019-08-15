@@ -5,6 +5,7 @@
     justify-items: center;
     grid-column: 1;
     background-color: #e1d5bf;
+    width: 100%;
   }
   
   .main-figure{
@@ -26,7 +27,7 @@
 
 
 /* responsive design for tablet */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 420px) and (max-width: 1024px) {
   .main-header {
     display: grid;
     justify-items: center;
