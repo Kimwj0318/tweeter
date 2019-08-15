@@ -2,6 +2,7 @@
   display: grid;
   justify-items: center;
   grid-column: 1;
+  background-color: #e1d5bf;
 }
 
 .main-figure{
