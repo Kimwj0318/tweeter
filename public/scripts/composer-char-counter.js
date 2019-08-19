@@ -3,7 +3,6 @@ $(document).ready(function() {
     let charRemaining = $(this).siblings(".counter")[0];
     const maxLength = 140;
     let currentLength = this.value.length;
-    console.log(charRemaining);
 
     $(charRemaining).text(maxLength - currentLength)
     if(currentLength === maxLength) {

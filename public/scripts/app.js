@@ -99,11 +99,15 @@ const createTweetElement = function(obj) {
 const renderTweets = function(tweetArray){
   //input: an array with objects as its elements
   const tweetContainer = $(".tweet-container");
-
-  tweetContainer.empty();
-
-  for (let element of tweetArray){
-    let tweet = createTweetElement(element);
+  
+  if (!$('.tweet-container')[0].hasChildNodes()){
+    for (let element of tweetArray){
+      let tweet = createTweetElement(element);
+      tweetContainer.prepend(tweet);
+    }
+  } else {
+    let newestTweet = tweetArray.pop(tweetArray);
+    let tweet = createTweetElement(newestTweet);
     tweetContainer.prepend(tweet);
   }
 }
@@ -145,7 +149,7 @@ $(document).ready(function() {
     const data = $(this).serialize();
     const type = "POST";
     if(data.length-5){
-      if (!data.replace(/\s/g, '').length){
+      if (data.replace(/\+/g, "").length -5){
         $.ajax({
           url: url,
           data: data,
