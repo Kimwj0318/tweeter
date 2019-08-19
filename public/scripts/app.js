@@ -99,7 +99,9 @@ const createTweetElement = function(obj) {
 const renderTweets = function(tweetArray){
   //input: an array with objects as its elements
   const tweetContainer = $(".tweet-container");
+
   tweetContainer.empty();
+
   for (let element of tweetArray){
     let tweet = createTweetElement(element);
     tweetContainer.prepend(tweet);
@@ -109,6 +111,7 @@ const renderTweets = function(tweetArray){
 const loadTweets = function() {
   const url = "/tweets";
   const type = "GET";
+
   $.ajax({
     url: url,
     type: type,
@@ -122,8 +125,11 @@ $(document).ready(function() {
   const $tweetComposer = $(".new-tweet");
   const $postNewTweetButton = $(".new-tweet-button");
   const $textArea = $(".tweet-text-area");
+
   $tweetComposer.hide();
+
   $(".error-message").hide();
+
   loadTweets();
 
   $postNewTweetButton.click(function(event) {
@@ -137,10 +143,9 @@ $(document).ready(function() {
     
     const url = "/tweets/";
     const data = $(this).serialize();
-    console.log(typeof data);
     const type = "POST";
-    if (!data.replace(/\s/g, '').length){
-      if(data.length-5){
+    if(data.length-5){
+      if (!data.replace(/\s/g, '').length){
         $.ajax({
           url: url,
           data: data,
@@ -152,11 +157,20 @@ $(document).ready(function() {
           $(".tweet-text-area").val("");
         });
       } else {
-        $(".error-message").show();
+        $(".tweet-label").text("You only put spaces in your tweet!");
+        $(".tweet-form").addClass("error-message");
         setTimeout(function(){
-          $(".error-message").hide();
-        }, 1000);
+          $(".tweet-label").text("What are you humming about?");
+          $(".tweet-form").removeClass("error-message");
+        }, 2000);
       }
+    } else {
+      $(".tweet-label").text("You didn't tweet anything!");
+      $(".tweet-form").addClass("error-message");
+      setTimeout(function(){
+        $(".tweet-label").text("What are you humming about?");
+        $(".tweet-form").removeClass("error-message");
+      }, 2000);
     }
   });
 

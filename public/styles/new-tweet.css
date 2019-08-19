@@ -11,6 +11,7 @@
   }
   
   .tweet-form {
+    width: 90%;
     margin: 10px;
     text-align: justify;
     display: flex;
@@ -45,6 +46,14 @@
   
   .counter {
     font-weight: 700;
+  }
+
+  .black{
+    color: black;
+  }
+
+  .red{
+    color:red;
   }
 }
 
@@ -90,6 +99,14 @@
   .counter {
     font-weight: 700;
   }
+
+  .black{
+    color: black;
+  }
+
+  .red{
+    color:red;
+  }
 }
 
  /* Responsive design for desktop */
@@ -132,5 +149,13 @@
   
   .counter {
     font-weight: 700;
+  }
+
+  .black{
+    color: black;
+  }
+
+  .red{
+    color:red;
   }
 }
