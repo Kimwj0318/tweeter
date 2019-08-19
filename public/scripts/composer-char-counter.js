@@ -3,12 +3,16 @@ $(document).ready(function() {
     let charRemaining = $(this).siblings(".counter")[0];
     const maxLength = 140;
     let currentLength = this.value.length;
+    console.log(charRemaining);
 
-    charRemaining.innerHTML = maxLength - currentLength
+    $(charRemaining).text(maxLength - currentLength)
     if(currentLength === maxLength) {
-      charRemaining.style.color = "red";
+      $(charRemaining).removeClass("black");
+      $(charRemaining).addClass("red");
+      
     } else {
-      charRemaining.style.color= "black";
+      $(charRemaining).removeClass("red");
+      $(charRemaining).addClass("black");
     }
   })
 
