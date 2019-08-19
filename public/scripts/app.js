@@ -58,6 +58,8 @@ const createTweetElement = function(obj) {
     </article>
   `);
  
+  const trimmedContent = obj.content.text.trim();
+
   const $tweetHeader = $(`
     <header class="tweeted-header">
         <span class="header-image-name">
@@ -74,7 +76,7 @@ const createTweetElement = function(obj) {
    
     <p class="tweeted-text">
     </p>
-  `).text(obj.content.text);
+  `).text(trimmedContent);
 
   const $tweetFooter = $(`
     <footer class="tweeted-footer">
@@ -135,24 +137,26 @@ $(document).ready(function() {
     
     const url = "/tweets/";
     const data = $(this).serialize();
+    console.log(typeof data);
     const type = "POST";
-    
-    if(data.length-5){
-      $.ajax({
-        url: url,
-        data: data,
-        type: type,
-      })
-      .then(loadTweets)
-      .then(function(){
-        $(".counter")[0].innerHTML = 140;
-        $(".tweet-text-area").val("");
-      });
-    } else {
-      $(".error-message").show();
-      setTimeout(function(){
-        $(".error-message").hide();
-      }, 1000);
+    if (!data.replace(/\s/g, '').length){
+      if(data.length-5){
+        $.ajax({
+          url: url,
+          data: data,
+          type: type,
+        })
+        .then(loadTweets)
+        .then(function(){
+          $(".counter")[0].innerHTML = 140;
+          $(".tweet-text-area").val("");
+        });
+      } else {
+        $(".error-message").show();
+        setTimeout(function(){
+          $(".error-message").hide();
+        }, 1000);
+      }
     }
   });
 
