@@ -100,7 +100,7 @@ const renderTweets = function(tweetArray){
   tweetContainer.empty();
   for (let element of tweetArray){
     let tweet = createTweetElement(element);
-    tweetContainer.append(tweet);
+    tweetContainer.prepend(tweet);
   }
 }
 
@@ -117,7 +117,6 @@ const loadTweets = function() {
 }
 
 $(document).ready(function() {
-  const $tweetContainer = $(".container");
   const $tweetComposer = $(".new-tweet");
   const $postNewTweetButton = $(".new-tweet-button");
   const $textArea = $(".tweet-text-area");

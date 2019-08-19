@@ -2,12 +2,10 @@
 @media only screen and (max-width: 430px) {
   .tweet-container {
     grid-column: 2;
-    display: flex;
-    flex-wrap: wrap-reverse;
+    width: 100%;
   }
   
   .tweeted-article{
-    width:100%;
     display: grid;
     grid-template-rows: 90px 1fr 40px;
     grid-row-gap: 10px;
@@ -16,7 +14,7 @@
     margin: 1em;
     font-family: "Source Sans Pro";
     font-weight: 300;
-    hyphens: auto;
+    word-wrap: break-word;
   }
   
   .tweeted-header{
@@ -49,6 +47,7 @@
     margin: 0;
     border-bottom: 2px solid black;
     align-self: end;
+    word-break: break-all;
   }
   
   .tweeted-footer{
@@ -87,8 +86,7 @@
 @media only screen and (min-width: 430px) and (max-width: 1024px) {
   .tweet-container {
     grid-column: 2;
-    display: flex;
-    flex-wrap: wrap-reverse;
+    width: 100%;
   }
   
   .tweeted-article{
@@ -100,8 +98,7 @@
     margin: 1em;
     font-family: "Source Sans Pro";
     font-weight: 300;
-    hyphens: auto;
-    width:100%;
+    word-wrap: break-word;
   }
   
   .tweeted-header{
@@ -132,6 +129,7 @@
     margin: 0;
     border-bottom: 2px solid black;
     align-self: end;
+    word-break: break-all;
   }
   
   .tweet-icon{
@@ -169,12 +167,10 @@
  @media only screen and (min-width: 1024px) {
   .tweet-container {
     grid-column: 2;
-    display: flex;
-    flex-wrap: wrap-reverse;
+    width: 100%;
   }
   
   .tweeted-article{
-    width:100%;
     display: grid;
     grid-template-rows: 90px 1fr 40px;
     grid-row-gap: 10px;
@@ -183,7 +179,6 @@
     margin: 1em;
     font-family: "Source Sans Pro";
     font-weight: 300;
-    hyphens: auto;
     vertical-align: center;
   }
   
@@ -223,6 +218,7 @@
     margin: 0;
     border-bottom: 2px solid black;
     align-self: end;
+    word-break: break-all;
   }
   
   .tweeted-footer{
